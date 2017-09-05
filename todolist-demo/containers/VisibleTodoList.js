@@ -26,7 +26,7 @@ const mapDispatchTopros=(dispatch)=>{
     }
 }
 
-VisibleTodoList =connect(
+const VisibleTodoList =connect(
     mapStateToProps,
     mapDispatchTopros
-)(VisibleTodoList)
+)(TodoList)

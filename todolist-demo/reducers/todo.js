@@ -5,7 +5,7 @@ const todo =(state,action)=>{
         return{
             id:action.id,
             text:action.text,
-            completed:false,
+            completed:false,//刚传入的代办未完成
         }
     case  "TOGGLE_TODO":
         if(state.id !== action.id){
@@ -22,7 +22,7 @@ const todo =(state,action)=>{
 
 //待办列表的响应
 //列表的state可以明白就不是一个对象了，这里是个数组
-const todos =(state,action)=>{
+const todos =(state=[],action)=>{
     switch (action.type){
     case "ADD_TODO":
         //...es6 扩展运算符
@@ -37,4 +37,4 @@ const todos =(state,action)=>{
     }
 }
 
-export  default todos;
+export default todos;

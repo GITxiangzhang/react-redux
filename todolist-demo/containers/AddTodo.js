@@ -5,7 +5,7 @@ let AddTodo=({dispatch})=>{
     let input;
     return(
         <div>
-            <from onSubmit={e=>{
+            <form onSubmit={e=>{
                 e.preventDefault();
                 if(!input.value.trim()){
                     return
@@ -18,7 +18,7 @@ let AddTodo=({dispatch})=>{
                 <button type="submit">
                     增加
                 </button>
-            </from>
+            </form>
         </div>
     )
 
